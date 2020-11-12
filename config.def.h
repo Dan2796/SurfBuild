@@ -117,9 +117,23 @@ static Key keys[] = {
 
 	{ 0,                     GDK_KEY_Escape, stop,       { 0 } },
 	{ MODKEY,                GDK_KEY_c,      stop,       { 0 } },
+  { MODKEY,                GDK_i,      navigate,   { .i = +1 } },
+  { MODKEY,                GDK_o,      navigate,   { .i = -1 } },
+
+  { MODKEY,                GDK_j,      scroll_v,   { .i = +1 } },
+  { MODKEY,                GDK_k,      scroll_v,   { .i = -1 } },
+  { MODKEY,                GDK_b,      scroll_v,   { .i = -10000 } },
+  { MODKEY,                GDK_f,      scroll_v,   { .i = +10000 } },
+  { MODKEY,                GDK_space,  scroll_v,   { .i = +10000 } },
+  { MODKEY,                GDK_l,      scroll_h,   { .i = +1 } },
+  { MODKEY,                GDK_h,      scroll_h,   { .i = -1 } },
 
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_r,      reload,     { .b = 1 } },
 	{ MODKEY,                GDK_KEY_r,      reload,     { .b = 0 } },
+  { 0,                     GDK_F11,    fullscreen, { 0 } },
+  { 0,                     GDK_Escape, stop,       { 0 } },
+  { MODKEY,                GDK_u,      source,     { 0 } },
+  { MODKEY|GDK_SHIFT_MASK, GDK_u,      inspector,  { 0 } },
 
 	{ MODKEY,                GDK_KEY_l,      navigate,   { .i = +1 } },
 	{ MODKEY,                GDK_KEY_h,      navigate,   { .i = -1 } },
@@ -135,11 +149,9 @@ static Key keys[] = {
 	{ MODKEY,                GDK_KEY_u,      scroll,     { .i = 'l' } },
 
 
-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_j,      zoom,       { .i = -1 } },
-	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_k,      zoom,       { .i = +1 } },
+	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_k,      zoom,       { .i = -1 } },
+	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_j,      zoom,       { .i = +1 } },
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_q,      zoom,       { .i = 0  } },
-	{ MODKEY,                GDK_KEY_minus,  zoom,       { .i = -1 } },
-	{ MODKEY,                GDK_KEY_plus,   zoom,       { .i = +1 } },
 
 	{ MODKEY,                GDK_KEY_p,      clipboard,  { .b = 1 } },
 	{ MODKEY,                GDK_KEY_y,      clipboard,  { .b = 0 } },
